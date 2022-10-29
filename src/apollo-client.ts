@@ -2,11 +2,12 @@
 import { ApolloClient, InMemoryCache, HttpLink } from "@apollo/client/core"
 // import { getMainDefinition } from "@apollo/client/utilities"
 import { onError } from "@apollo/client/link/error"
+import Auth from "./Auth0/autho_avilabl"
 import { logErrorMessages } from "@vue/apollo-util"
 
 function getHeaders() {
     const headers = {}
-    const token = window.localStorage.getItem("apollo-token")
+    const token = window.localStorage.getItem('')
     if (token) {
         headers["Authorization"] = `Bearer ${token}`
     }
@@ -15,7 +16,7 @@ function getHeaders() {
 
 // Create an http link:
 const httpLink = new HttpLink({
-  uri: "https://climbing-silkworm-26.hasura.app/v1beta1/relay",
+  uri: "https://recipes-project.hasura.app/v1/graphql",
 
   fetch: (uri: RequestInfo, options: RequestInit) => {
     options.headers = getHeaders();

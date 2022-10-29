@@ -6,6 +6,7 @@ import Holiday from "../components/Holiday.vue"
 import Meal from "../components/Meal.vue"
 import Dessert from "../components/Dessert.vue"
 import All_Recieps from "../components/All_Recieps.vue"
+import culturalFoods from "../pages/culturalfoods.vue"
 const routes = [
   {
     path: "/",
@@ -42,6 +43,11 @@ const routes = [
     path: "/About_us",
     name: "About_us",
     component: About_us,
+  },
+  {
+    path: "/culturalFoods",
+    name: "culturalFoods",
+    component: culturalFoods,
   },
 ];
 const router = createRouter({

@@ -7,9 +7,7 @@ import Navbar from './pages/Navbar.vue';
 
   </script>
 <template>
-        <div>
           <Navbar/>
-        </div>
 </template>
 
 
